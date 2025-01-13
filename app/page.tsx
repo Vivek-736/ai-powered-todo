@@ -103,7 +103,7 @@ export default function Home() {
               key={todo.id}
               className="flex justify-between items-center bg-white p-3 rounded-lg shadow"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-1 min-w-0">
                 <input
                   type="checkbox"
                   checked={todo.completed}
@@ -111,8 +111,9 @@ export default function Home() {
                   className="h-5 w-5 text-blue-600 rounded"
                 />
                 <span
-                  className={`text-gray-700 overflow-y-scroll max-h-20 min-h-[2rem] ${todo.completed ? "line-through text-gray-400" : ""
-                    }`}
+                  className={`text-gray-700 overflow-y-auto max-h-20 flex-1 min-w-0 break-words ${
+                    todo.completed ? "line-through" : ""
+                  }`}
                 >
                   {todo.text}
                 </span>
