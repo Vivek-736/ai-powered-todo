@@ -1,11 +1,29 @@
 "use client";
 import { useState, useEffect } from "react";
 import { CopilotPopup } from "@copilotkit/react-ui";
+import { useCopilotAction } from "@copilotkit/react-core"; 
 
 export default function Home() {
   const [todos, setTodos] = useState<{ id: number; text: string; completed: boolean }[]>([]);
   const [input, setInput] = useState("");
   const [editId, setEditId] = useState<number | null>(null);
+ 
+  useCopilotAction({
+    name: "addTodoItem",
+    description: "Add a new todo item to the list",
+    parameters: [
+      {
+        name: "todoText",
+        type: "string",
+        description: "The text of the todo item to add",
+        required: true,
+      },
+    ],
+    handler: async ({ todoText }) => {
+      const newTodo = { id: Date.now(), text: todoText, completed: false };
+      setTodos([...todos, newTodo]);
+    },
+  });
 
   useEffect(() => {
     const todoString = localStorage.getItem("todos");

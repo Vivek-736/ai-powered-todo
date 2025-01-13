@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CopilotKit runtimeUrl="/api/copilotkit">
+        <CopilotKit publicApiKey="ck_pub_dad76dc6437078f77e58360fa52488ef">
           {children}
         </CopilotKit>
       </body>
