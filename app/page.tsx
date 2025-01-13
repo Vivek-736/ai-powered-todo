@@ -111,7 +111,7 @@ export default function Home() {
                   className="h-5 w-5 text-blue-600 rounded"
                 />
                 <span
-                  className={`text-gray-700 overflow-y-auto max-h-20 ${todo.completed ? "line-through text-gray-400" : ""
+                  className={`text-gray-700 overflow-y-scroll max-h-20 min-h-[2rem] ${todo.completed ? "line-through text-gray-400" : ""
                     }`}
                 >
                   {todo.text}
