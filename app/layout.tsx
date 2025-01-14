@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CopilotKit publicApiKey="ck_pub_dad76dc6437078f77e58360fa52488ef">
+        <CopilotKit publicApiKey="ck_pub_a397a741c7e58200cc65710f5260c027">
           {children}
         </CopilotKit>
       </body>
