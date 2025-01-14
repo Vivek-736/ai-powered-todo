@@ -139,7 +139,7 @@ export default function Home() {
           instructions={"You are assisting the user as best as you can. Answer in the best way possible given the data you have."}
           labels={{
             title: "VTodo Assistant",
-            initial: "You can ask me to add todo or delete todo, I can control your todo list for you😉",
+            initial: "You can ask me to add todos, I can control your todo list for you😉",
           }}
         />
       </main>
